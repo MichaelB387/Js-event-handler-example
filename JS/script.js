@@ -6,7 +6,9 @@ ALERT.classList.add("hide")
 
 
 // Toggles for when button is clicked
-function reveal() {
+function reveal(e) {
+    // This prevents the handler going to the default setting once clicked
+    e.preventDefault()
     CTA.classList.toggle("hide")
     ALERT.classList.toggle("hide")
 
